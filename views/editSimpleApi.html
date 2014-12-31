@@ -1,0 +1,27 @@
+<% include share/header.html%>
+<% include share/navbar.html%>
+<div class="ta-container">
+	<div class="panel panel-default">
+  		<div class="panel-heading">
+  	  		<h3 class="panel-title">创建  直接访问型API</h3>
+  		</div>
+ 		<div class="panel-body">
+ 		<form role="form" method="post" action="/action/editSimple">
+ 			<input type="hidden" name="id" value="<%=item.id%>">
+   	 	 	<div class="control-group">
+          		<label>请求的Action</label>
+            	<input name="name" type="text" value="<%=item.name%>" class="form-control" placeholder="eg: 'getGoodsList'" required="required"maxlength="200">
+        	</div>
+        	<br>
+			<div class="control-group">
+  				<label>返回的内容(贴入的返回结果将直接返回)</label>
+  				<textarea name="result" class="form-control" rows="15" placeholder="eg: '{username : 'dddd'}'" required="required"maxlength="200"><%=item.result%></textarea>
+			</div>
+			<br> 
+			<button class="btn btn-primary btn-lg" type="submit">
+			<span class="glyphicon glyphicon-ok"></span> 修改</button>
+		</form>
+  		</div>
+	</div>
+</div>
+<% include share/footer.html%>

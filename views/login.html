@@ -1,0 +1,17 @@
+<% include share/welcome-header.html%>
+<div class="container">
+	<form class="form-signin" role="form" method="post" action="users/login">
+		<h2 class="form-signin-heading">Please sign in</h2>
+		<% include share/error_tag.html%> 
+		<input name="username" type="text" class="form-control" placeholder="User Name" required="true" autofocus="" maxlength="20"> 
+		<input name="password" type="password" class="form-control" placeholder="Password" required="" maxlength="20">
+		<div class="checkbox">
+			<label> <input type="checkbox" value="1" name="remember">
+				Remember me(7 days)
+			</label>
+		</div>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+		<p class="navbar-text">Have no account? you can <a href="register" class="navbar-link">Create One</a></p>
+	</form>
+</div>
+<% include share/footer.html%>

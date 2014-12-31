@@ -1,0 +1,13 @@
+<% include share/welcome-header.html%>
+<div class="container">
+	<form class="form-signin" role="form" method="post" action="users/register">
+		<h2 class="form-signin-heading">Sign up TempApi :)</h2>
+		<% include share/error_tag.html%> 
+		<input name="username" type="text" class="form-control" placeholder="User Name" required="true" autofocus="true" maxlength="20"> 
+		<input name="password" type="password" class="form-control" placeholder="Password" required="true" maxlength="20">
+		<button class="btn btn-lg btn-success btn-block" type="submit">create an account</button>
+		<br>
+		<a href="login" class="navbar-link">Sign in -></a></p>
+	</form>
+</div>
+<% include share/footer.html%>

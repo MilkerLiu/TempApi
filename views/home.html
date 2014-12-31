@@ -1,0 +1,48 @@
+<% include share/header.html%>
+<% include share/navbar.html%>
+<div class="ta-container">
+<div class="panel panel-default">
+  <div class="panel-heading">接口列表</div>
+  <table class="table">
+  	<tr>
+  		<th>创建人/名称</th>
+  		<th>类型</th>
+  		<th>访问</th>
+  		<th>编辑</th>
+  	</tr>
+  	<% items.forEach(function(item){ %>
+    <tr>
+  		<td><%=item.username%> / <%=item.name%></td>
+  		<td><%if(item.type==1){
+  		%>直接访问型<%
+  		} else {
+  		%>跳转处理型<%
+  		}%></td>
+  		<td><a target="_blank" href="action/<%=item.username%>/<%=item.name%>">测试</a></td>
+  		<td><%if(item.userid == user.id) {%>
+  			<a href="action/editSimpleApi/<%=item.id%>">编辑</a>
+  			/<a href="javascript:del(<%=item.id%>)">删除</a>
+  			<%}%></td>
+  	</tr>
+ 	<% }) %>
+  </table>
+  </div>
+  <script type="text/javascript">
+ 	function del(id) {
+ 		$.teninedialog({
+			title:'系统提示',
+			content:'确认删除本条记录?',
+			otherButtons:["确定"],
+			otherButtonStyles:['btn-primary'],
+			clickButton:function(sender,modal,index){
+               	if(index == 0) {
+            	 	window.location.href = "/action/del?id=" + id;
+               	}
+                $(this).closeDialog(modal);
+            }
+		});
+	}
+  </script>
+  <% include share/page.html%>
+<div>
+<% include share/footer.html%>

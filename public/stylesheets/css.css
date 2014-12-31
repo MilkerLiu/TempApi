@@ -1,0 +1,28 @@
+.ta-container {
+	width: 80%;
+	margin-top:60px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page-form {
+	width: 300px;
+}
+
+.page-form ul li {
+ float: left;
+}
+ .page-form ul li input {
+width: 40px;
+float: left;  
+border-radius: 0;
+}
+
+ .page-form ul li label {
+ height:auto;
+ align:center;
+float: left;
+}
+
+.box1{
+padding:10px}

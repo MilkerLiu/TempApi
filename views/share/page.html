@@ -1,0 +1,11 @@
+<form class="page-form" method="post" action="<%=page.action%>" >
+<nav> 
+  <ul class="pagination">
+    <li><a href="<%=page.action%>?currentPage=1">&laquo;</a></li>
+    <li><a href="<%=page.action%>?currentPage=<%=page.prePage%>">&lt;</a></li>
+    <li><span>第</span><input type="text" class="form-control" name="currentPage" value="<%=page.currentPage%>"/><span>页,共<%=page.pages%>页</span></li>
+    <li><a href="<%=page.action%>?currentPage=<%=page.nextPage%>">&gt;</a></li>
+    <li><a href="<%=page.action%>?currentPage=<%=page.pages%>">&raquo;</a></li>
+  </ul>
+</nav>
+<form>
